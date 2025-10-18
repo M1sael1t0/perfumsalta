@@ -1,0 +1,124 @@
+/* Estilos generales que ya tenías */
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif; /* Muevemos la fuente aquí para que aplique a toda la página */
+}
+
+/* --- Títulos con Degradado --- */
+
+/* Título Principal (H1) */
+h1 {
+    text-align: center;
+    font-size: 3rem; /* Un tamaño de fuente más moderno y adaptable */
+    font-weight: bold;
+    background: linear-gradient(45deg, #A020F0, #FF0000); /* Degradado de morado a rojo */
+    -webkit-background-clip: text; /* Necesario para que el degradado se aplique solo al texto en navegadores como Chrome/Safari */
+    -webkit-text-fill-color: transparent; /* Oculta el color original del texto para mostrar el degradado */
+    background-clip: text;
+    color: transparent; /* Fallback para otros navegadores */
+}
+
+/* Subtítulos (H2) */
+h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    background: linear-gradient(45deg, #2a0845, #6441A5); /* Degradado de morado oscuro a uno más claro */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+/* --- Imágenes Responsivas --- */
+
+/*
+  Esta regla se aplica a todas las imágenes (<img>), SVG (<svg>) y elementos <picture>.
+  Les da un ancho máximo del 100% de su contenedor.
+  'height: auto' mantiene la proporción original de la imagen.
+  'display: block' elimina espacios extra debajo de la imagen.
+*/
+img, svg, picture {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto; /* Centra las imágenes que no ocupan todo el ancho */
+    margin-right: auto;
+}
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Títulos con Degradado */
+h1 {
+    text-align: center;
+    font-size: 3rem; 
+    font-weight: bold;
+    background: linear-gradient(45deg, #A020F0, #FF0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    background: linear-gradient(45deg, #2a0845, #6441A5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Imágenes Responsivas */
+img, svg, picture {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- TU SISTEMA DE COLUMNAS Y BORDES --- */
+
+/* La fila que envuelve las columnas */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* La regla que aplica el borde y el espaciado a CUALQUIER elemento con una clase "col-" */
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    border: 1px solid purple; /* ¡AQUÍ ESTÁ TU BORDE! */
+}
+
+/* Tamaños de columna para móviles (Extra Small) */
+.col-xs-1 {width: 8.33%;}
+/* ... (resto de tus clases .col-xs-) ... */
+.col-xs-12 {width: 100%;}
+
+/* Tamaños para tablets (Medium) */
+@media only screen and (min-width: 600px) {
+    .col-md-1 {width: 8.33%;}
+    /* ... (resto de tus clases .col-md-) ... */
+    .col-md-12 {width: 100%;}
+}
+
+/* Tamaños para laptops (Large) */
+@media only screen and (min-width: 992px) {
+    .col-lg-1 {width: 8.33%;}
+    /* ... (resto de tus clases .col-lg-) ... */
+    .col-lg-12 {width: 100%;}
+}
+
+/* Tamaños para pantallas grandes (Extra Large) */
+@media only screen and (min-width: 1200px) {
+    .col-xl-1 {width: 8.33%;}
+    /* ... (resto de tus clases .col-xl-) ... */
+    .col-xl-12 {width: 100%;}
+}

@@ -11,7 +11,7 @@
     <style>
         /* Estilos rápidos para que los nuevos elementos se vean ordenados */
         .producto {
-            border: 1px solid #eee;
+            border: 1px solid #6f00ff;
             border-radius: 8px;
             padding: 15px;
             margin-bottom: 20px;
@@ -26,7 +26,7 @@
         .precio {
             font-size: 1.2em;
             font-weight: bold;
-            color: #2a9d8f;
+            color: #6f00ff;
         }
         .btn-agregar-carrito {
             background-color: #264653;
@@ -110,50 +110,136 @@
 
         <div class="row">
             <section id="catalogo" class="col-xs-12" aria-labelledby="titulo-catalogo">
-                <h2 id="titulo-catalogo">Catálogo de Diseñador</h2>
-                <div class="row">
-                    
-                    <article class="col-xs-12 col-md-6 col-lg-4 producto">
-                        <img src="img/sauvage.jpg" alt="Perfume Sauvage de Dior" class="img-producto">
-                        <h3>Sauvage <small>(Dior)</small></h3>
-                        <p class="descripcion">Oriental Fougère. Notas: bergamota, ambroxan, pimienta.</p>
-                        <p class="precio">$230</p>
-                        <button class="btn-agregar-carrito" data-id="sauvage-dior-100">
-                            Añadir al Carrito
-                        </button>
-                    </article>
+    
+    <h2 id="titulo-catalogo-hombres">Catálogo - Hombre</h2>
+    <div class="row">
+        
+        <article class="col-xs-12 col-md-6 col-lg-4 producto">
+            <img src="img/sauvage.jpg" alt="Perfume Dior Sauvage" class="img-producto">
+            <h3>Sauvage <small>(Dior)</small></h3>
+            <p class="descripcion">Aromático Fougère. Notas: bergamota, ambroxan, vainilla.</p>
+            <p class="precio">$0</p>
+            <button class="btn-agregar-carrito" data-id="dior-sauvage-100">
+                Añadir al Carrito
+            </button>
+        </article>
 
-                    <article class="col-xs-12 col-md-6 col-lg-4 producto">
-                        <img src="img/lebeau.jpg" alt="Perfume Le Beau Le Parfum de Jean Paul Gaultier" class="img-producto">
-                        <h3>Le beau Le parfum <small>(Jean Paul Gaultier)</small></h3>
-                        <p class="descripcion">Amaderada Dulce. Notas: madera de coco, sándalo, haba tonka.</p>
-                        <p class="precio">$240</p>
-                        <button class="btn-agregar-carrito" data-id="lebeau-jpg-125">
-                            Añadir al Carrito
-                        </button>
-                    </article>
-                    
-                    <article class="col-xs-12 col-md-6 col-lg-4 producto">
-                        <img src="img/invictus.jpg" alt="Perfume Invictus Victory Elixir de Paco Rabanne" class="img-producto">
-                        <h3>Invictus Victory Elixir <small>(Paco Rabanne)</small></h3>
-                        <p class="descripcion">Dulce. Notas: canela, cuero, toronja.</p>
-                        <p class="precio">$200</p>
-                        <button class="btn-agregar-carrito" data-id="invictus-victory-100">
-                            Añadir al Carrito
-                        </button>
-                    </article>
+        <article class="col-xs-12 col-md-6 col-lg-4 producto">
+            <img src="img/bleu-chanel.jpg" alt="Perfume Bleu de Chanel" class="img-producto">
+            <h3>Bleu de Chanel <small>(Chanel)</small></h3>
+            <p class="descripcion">Amaderado Aromático. Notas: cítricos, jengibre, sándalo.</p>
+            <p class="precio">$0</p>
+            <button class="btn-agregar-carrito" data-id="chanel-bleu-100">
+                Añadir al Carrito
+            </button>
+        </article>
 
-                    <article class="col-xs-12 col-md-6 col-lg-4 producto">
-                        <img src="img/aventus.jpg" alt="Perfume Creed Aventus" class="img-producto">
-                        <h3>Creed Aventus <small>(Creed)</small></h3>
-                        <p class="descripcion">Chipre Frutal. Notas: piña, abedul, almizcle.</p>
-                        <p class="precio">$260</p>
-                        <button class="btn-agregar-carrito" data-id="creed-aventus-100">
-                            Añadir al Carrito
-                        </button>
-                    </article>
-                    
-                    </div>
+        <article class="col-xs-12 col-md-6 col-lg-4 producto">
+            <img src="img/le-male-le-parfum.jpg" alt="Perfume Jean Paul Gaultier Le Male Le Parfum" class="img-producto">
+            <h3>Le Male Le Parfum <small>(Jean Paul Gaultier)</small></h3>
+            <p class="descripcion">Oriental. Notas: cardamomo, lavanda, vainilla.</p>
+            <p class="precio">$0</p>
+            <button class="btn-agregar-carrito" data-id="jpg-le-male-parfum-125">
+                Añadir al Carrito
+            </button>
+        </article>
+
+        <article class="col-xs-12 col-md-6 col-lg-4 producto">
+            <img src="img/aventus.jpg" alt="Perfume Creed Aventus" class="img-producto">
+            <h3>Creed Aventus <small>(Creed)</small></h3>
+            <p class="descripcion">Chipre Frutal. Notas: piña, abedul, musgo de roble.</p>
+            <p class="precio">$0</p>
+            <button class="btn-agregar-carrito" data-id="creed-aventus-100">
+                Añadir al Carrito
+            </button>
+        </article>
+
+        <article class="col-xs-12 col-md-6 col-lg-4 producto">
+            <img src="img/acqua-di-gio.jpg" alt="Perfume Acqua di Giò Profondo" class="img-producto">
+            <h3>Acqua di Giò Profondo <small>(Giorgio Armani)</small></h3>
+            <p class="descripcion">Aromático Acuático. Notas: marinas, mandarina verde, pachulí.</p>
+            <p class="precio">$0</p>
+            <button class="btn-agregar-carrito" data-id="armani-adg-profondo-100">
+                Añadir al Carrito
+            </button>
+        </article>
+
+        <article class="col-xs-12 col-md-6 col-lg-4 producto">
+            <img src="img/versace-eros.jpg" alt="Perfume Versace Eros" class="img-producto">
+            <h3>Eros <small>(Versace)</small></h3>
+            <p class="descripcion">Aromático Fougère. Notas: menta, manzana verde, vainilla.</p>
+            <p class="precio">$0</p>
+            <button class="btn-agregar-carrito" data-id="versace-eros-100">
+                Añadir al Carrito
+            </button>
+        </article>
+    </div>
+
+    <h2 id="titulo-catalogo-mujeres" style="margin-top: 40px;">Catálogo - Mujer</h2>
+    <div class="row">
+
+        <article class="col-xs-12 col-md-6 col-lg-4 producto">
+            <img src="img/ysl-libre.jpg" alt="Perfume YSL Libre" class="img-producto">
+            <h3>Libre <small>(Yves Saint Laurent)</small></h3>
+            <p class="descripcion">Floral. Notas: lavanda, flor de azahar, vainilla.</p>
+            <p class="precio">$0</p>
+            <button class="btn-agregar-carrito" data-id="ysl-libre-90">
+                Añadir al Carrito
+            </button>
+        </article>
+
+        <article class="col-xs-12 col-md-6 col-lg-4 producto">
+            <img src="img/la-vie-est-belle.jpg" alt="Perfume La Vie Est Belle" class="img-producto">
+            <h3>La Vie Est Belle <small>(Lancôme)</small></h3>
+            <p class="descripcion">Gourmand Floral. Notas: iris, pachulí, praliné.</p>
+            <p class="precio">$0</p>
+            <button class="btn-agregar-carrito" data-id="lancome-lvb-100">
+                Añadir al Carrito
+            </button>
+        </article>
+
+        <article class="col-xs-12 col-md-6 col-lg-4 producto">
+            <img src="img/good-girl.jpg" alt="Perfume Carolina Herrera Good Girl" class="img-producto">
+            <h3>Good Girl <small>(Carolina Herrera)</small></h3>
+            <p class="descripcion">Oriental Floral. Notas: nardo, haba tonka, cacao.</p>
+            <p class="precio">$0</p>
+            <button class="btn-agregar-carrito" data-id="ch-good-girl-80">
+                Añadir al Carrito
+            </button>
+        </article>
+
+        <article class="col-xs-12 col-md-6 col-lg-4 producto">
+            <img src="img/prada-paradoxe.jpg" alt="Perfume Prada Paradoxe" class="img-producto">
+            <h3>Paradoxe <small>(Prada)</small></h3>
+            <p class="descripcion">Floral Ambarino. Notas: neroli, ámbar, almizcle.</p>
+            <p class="precio">$0</p>
+            <button class="btn-agregar-carrito" data-id="prada-paradoxe-90">
+                Añadir al Carrito
+            </button>
+        </article>
+        
+        <article class="col-xs-12 col-md-6 col-lg-4 producto">
+            <img src="img/black-opium.jpg" alt="Perfume YSL Black Opium" class="img-producto">
+            <h3>Black Opium <small>(Yves Saint Laurent)</small></h3>
+            <p class="descripcion">Gourmand Oriental. Notas: café, vainilla, flores blancas.</p>
+            <p class="precio">$0</p>
+            <button class="btn-agregar-carrito" data-id="ysl-black-opium-90">
+                Añadir al Carrito
+            </button>
+        </article>
+
+        <article class="col-xs-12 col-md-6 col-lg-4 producto">
+            <img src="img/light-blue.jpg" alt="Perfume Dolce & Gabbana Light Blue" class="img-producto">
+            <h3>Light Blue <small>(Dolce & Gabbana)</small></h3>
+            <p class="descripcion">Cítrico Frutal. Notas: limón siciliano, manzana, cedro.</p>
+            <p class="precio">$0</p>
+            <button class="btn-agregar-carrito" data-id="dg-light-blue-100">
+                Añadir al Carrito
+            </button>
+        </article>
+
+        </div>
+        </section>
             </section>
         </div>
 

@@ -1,0 +1,319 @@
+/* --- 1. RESET Y GLOBALES --- */
+* {
+    /* Esto hace que el padding y el borde no afecten el ancho total */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fdfdfd; /* Un blanco muy suave */
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: #2a9d8f; /* Un verde azulado elegante */
+    text-decoration: none;
+}
+
+/* Contenedor principal para centrar el contenido */
+main, header, footer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 0.75em;
+}
+
+h1 { 
+    font-size: 2.5rem; 
+    color: #264653; /* Azul oscuro principal */
+}
+h2 { 
+    font-size: 2rem; 
+    color: #264653;
+    text-align: center;
+    width: 100%;
+    border-bottom: 3px solid #e9c46a; /* ORO */
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+h3 { 
+    font-size: 1.4rem; 
+}
+
+/* --- 2. HEADER Y NAVEGACIÓN --- */
+header {
+    text-align: center;
+    border-bottom: 2px solid #f4f4f4;
+    position: relative; /* Necesario para posicionar el carrito */
+}
+
+header h1 a {
+    color: inherit; /* Hereda el color del h1 */
+}
+
+header p {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Permite que el menú se ajuste en móviles */
+    justify-content: center;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: #2a9d8f;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #e9c46a; /* ORO */
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+/* --- 3. CARRITO DE COMPRAS --- */
+.carrito-contenedor {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.contador-carrito {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #e76f51; /* Naranja/Rojo para notificaciones */
+    color: white;
+    border-radius: 50%;
+    padding: 2px 7px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* --- 4. SISTEMA DE GRID (Tu HTML ya lo usa) --- */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    /* Márgenes negativos para compensar el padding de las columnas */
+    margin-left: -10px; 
+    margin-right: -10px;
+}
+
+/* Todas las columnas son 100% en móvil por defecto */
+[class*="col-"] {
+    width: 100%;
+    padding: 10px; /* Espacio entre columnas */
+}
+
+/* --- 5. CATÁLOGO Y TARJETAS DE PRODUCTO --- */
+.producto {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* Flexbox para alinear contenido (mágia de CSS) */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empuja el botón al fondo */
+    height: 100%; /* Hace que todas las tarjetas en una fila tengan la misma altura */
+}
+
+.producto:hover {
+    transform: translateY(-5px); /* Efecto de "levantar" la tarjeta */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.img-producto {
+    height: 220px; /* Altura fija para todas las imágenes */
+    object-fit: contain; /* Evita que la imagen se distorsione */
+    margin-bottom: 15px;
+}
+
+.producto h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5em;
+}
+
+.producto .descripcion {
+    font-size: 0.9rem;
+    color: #666;
+    flex-grow: 1; /* Ocupa el espacio sobrante, empujando el precio y botón */
+    margin-bottom: 15px;
+}
+
+.precio {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2a9d8f;
+    margin-bottom: 15px;
+}
+
+.btn-agregar-carrito {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #264653; /* Azul oscuro principal */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-agregar-carrito:hover {
+    background-color: #e9c46a; /* ORO */
+    color: #264653; /* Texto oscuro al pasar el mouse */
+}
+
+
+/* --- 6. FORMULARIO --- */
+#formulario {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+#formulario form {
+    max-width: 600px; /* Centra el formulario */
+    margin: 0 auto;
+}
+
+#formulario label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#formulario input[type="text"],
+#formulario input[type="email"],
+#formulario input[type="tel"],
+#formulario select,
+#formulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#formulario button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #e76f51; /* Naranja */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#formulario button:hover {
+    background-color: #f4a261; /* Naranja más claro */
+}
+
+
+/* --- 7. FOOTER --- */
+footer {
+    background-color: #264653; /* Azul oscuro principal */
+    color: #f4f4f4;
+    border-top: 5px solid #e9c46a; /* ORO */
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.footer-contenido {
+    display: flex;
+    flex-wrap: wrap; /* Se apila en móviles */
+    justify-content: space-between;
+}
+
+.footer-columna {
+    margin-bottom: 20px;
+    min-width: 200px; /* Ancho mínimo para las columnas */
+}
+
+.footer-columna h3 {
+    color: #e9c46a; /* ORO */
+    border-bottom: 1px solid #2a9d8f;
+    padding-bottom: 5px;
+}
+
+.footer-columna ul {
+    list-style: none;
+}
+
+.footer-columna ul li {
+    margin-bottom: 8px;
+}
+
+.footer-columna ul li a {
+    color: #f4f4f4;
+    transition: color 0.3s ease;
+}
+
+.footer-columna ul li a:hover {
+    color: #e9c46a; /* ORO */
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #3a5f70; /* Un azul un poco más claro */
+    padding-top: 20px;
+    color: #aaa;
+}
+
+
+/* --- 8. MEDIA QUERIES (RESPONSIVE) --- */
+
+/* Estilos para Tablets (Medium) */
+@media (min-width: 768px) {
+    .col-md-6 {
+        width: 50%;
+    }
+}
+
+/* Estilos para Desktops (Large) */
+@media (min-width: 992px) {
+    .col-lg-4 {
+        width: 33.3333%;
+    }
+}
