@@ -1,15 +1,31 @@
 /* --- 1. RESET Y GLOBALES --- */
 * {
-    /* Esto hace que el padding y el borde no afecten el ancho total */
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* --- ESTILO PARA EL LOGO EN EL HEADER --- */
+.header-logo {
+    height: 1.2em; /* Ajusta la altura del logo para que coincida con la altura del texto H1 */
+    vertical-align: middle; /* Alinea el logo verticalmente con el texto */
+    margin-right: 10px; /* Espacio entre el logo y el texto */
+    /* Si tu logo tiene un fondo oscuro y tu header es claro, podrías necesitar esto: */
+    /* filter: brightness(0) invert(1); */ /* Esto invierte los colores para un logo blanco en fondo oscuro */
+}
+
+/* Ajustes para el H1 cuando tiene un logo */
+header h1 {
+    display: flex; /* Permite que el logo y el texto estén en la misma línea */
+    align-items: center; /* Centra verticalmente el logo y el texto */
+    justify-content: center; /* Centra el logo y el texto horizontalmente */
+    margin-bottom: 0.5em; /* Ajusta el margen si es necesario */
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
-    background-color: #fdfdfd; /* Un blanco muy suave */
+    background-color: #fdfdfd; 
     color: #333;
 }
 
@@ -19,11 +35,10 @@ img {
 }
 
 a {
-    color: #2a9d8f; /* Un verde azulado elegante */
+    color: #2a9d8f;
     text-decoration: none;
 }
 
-/* Contenedor principal para centrar el contenido */
 main, header, footer {
     width: 100%;
     max-width: 1200px;
@@ -41,14 +56,14 @@ h1, h2, h3 {
 
 h1 { 
     font-size: 2.5rem; 
-    color: #264653; /* Azul oscuro principal */
+    color: #264653; 
 }
 h2 { 
     font-size: 2rem; 
     color: #264653;
     text-align: center;
     width: 100%;
-    border-bottom: 3px solid #e9c46a; /* ORO */
+    border-bottom: 3px solid #e9c46a; 
     padding-bottom: 10px;
     margin-bottom: 30px;
 }
@@ -60,11 +75,7 @@ h3 {
 header {
     text-align: center;
     border-bottom: 2px solid #f4f4f4;
-    position: relative; /* Necesario para posicionar el carrito */
-}
-
-header h1 a {
-    color: inherit; /* Hereda el color del h1 */
+    position: relative; 
 }
 
 header p {
@@ -76,7 +87,7 @@ header p {
 nav ul {
     list-style: none;
     display: flex;
-    flex-wrap: wrap; /* Permite que el menú se ajuste en móviles */
+    flex-wrap: wrap; 
     justify-content: center;
 }
 
@@ -91,7 +102,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #e9c46a; /* ORO */
+    color: #e9c46a;
     background-color: #f9f9f9;
     border-radius: 5px;
 }
@@ -108,7 +119,7 @@ nav ul li a:hover {
     position: absolute;
     top: -10px;
     right: -10px;
-    background: #e76f51; /* Naranja/Rojo para notificaciones */
+    background: #e76f51; 
     color: white;
     border-radius: 50%;
     padding: 2px 7px;
@@ -117,19 +128,17 @@ nav ul li a:hover {
     box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 
-/* --- 4. SISTEMA DE GRID (Tu HTML ya lo usa) --- */
+/* --- 4. SISTEMA DE GRID --- */
 .row {
     display: flex;
     flex-wrap: wrap;
-    /* Márgenes negativos para compensar el padding de las columnas */
     margin-left: -10px; 
     margin-right: -10px;
 }
 
-/* Todas las columnas son 100% en móvil por defecto */
 [class*="col-"] {
     width: 100%;
-    padding: 10px; /* Espacio entre columnas */
+    padding: 10px; 
 }
 
 /* --- 5. CATÁLOGO Y TARJETAS DE PRODUCTO --- */
@@ -141,22 +150,21 @@ nav ul li a:hover {
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
-    /* Flexbox para alinear contenido (mágia de CSS) */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Empuja el botón al fondo */
-    height: 100%; /* Hace que todas las tarjetas en una fila tengan la misma altura */
+    justify-content: space-between; 
+    height: 100%; 
+    position: relative; /* AÑADIDO: Para la insignia */
 }
 
 .producto:hover {
-    transform: translateY(-5px); /* Efecto de "levantar" la tarjeta */
+    transform: translateY(-5px); 
     box-shadow: 0 6px 12px rgba(0,0,0,0.1);
 }
 
 .img-producto {
-    height: 220px; /* Altura fija para todas las imágenes */
-    object-fit: contain; /* Evita que la imagen se distorsione */
+    height: 220px; 
+    object-fit: contain; 
     margin-bottom: 15px;
 }
 
@@ -168,7 +176,7 @@ nav ul li a:hover {
 .producto .descripcion {
     font-size: 0.9rem;
     color: #666;
-    flex-grow: 1; /* Ocupa el espacio sobrante, empujando el precio y botón */
+    flex-grow: 1; 
     margin-bottom: 15px;
 }
 
@@ -183,7 +191,7 @@ nav ul li a:hover {
     display: block;
     width: 100%;
     padding: 12px;
-    background-color: #264653; /* Azul oscuro principal */
+    background-color: #264653; 
     color: white;
     border: none;
     border-radius: 5px;
@@ -194,8 +202,8 @@ nav ul li a:hover {
 }
 
 .btn-agregar-carrito:hover {
-    background-color: #e9c46a; /* ORO */
-    color: #264653; /* Texto oscuro al pasar el mouse */
+    background-color: #e9c46a; 
+    color: #264653; 
 }
 
 
@@ -208,7 +216,7 @@ nav ul li a:hover {
 }
 
 #formulario form {
-    max-width: 600px; /* Centra el formulario */
+    max-width: 600px; 
     margin: 0 auto;
 }
 
@@ -235,7 +243,7 @@ nav ul li a:hover {
     display: block;
     width: 100%;
     padding: 12px;
-    background-color: #e76f51; /* Naranja */
+    background-color: #e76f51; 
     color: white;
     border: none;
     border-radius: 5px;
@@ -246,32 +254,32 @@ nav ul li a:hover {
 }
 
 #formulario button:hover {
-    background-color: #f4a261; /* Naranja más claro */
+    background-color: #f4a261; 
 }
 
 
 /* --- 7. FOOTER --- */
 footer {
-    background-color: #264653; /* Azul oscuro principal */
+    background-color: #264653; 
     color: #f4f4f4;
-    border-top: 5px solid #e9c46a; /* ORO */
+    border-top: 5px solid #e9c46a; 
     padding-top: 30px;
     padding-bottom: 30px;
 }
 
 .footer-contenido {
     display: flex;
-    flex-wrap: wrap; /* Se apila en móviles */
+    flex-wrap: wrap; 
     justify-content: space-between;
 }
 
 .footer-columna {
     margin-bottom: 20px;
-    min-width: 200px; /* Ancho mínimo para las columnas */
+    min-width: 200px; 
 }
 
 .footer-columna h3 {
-    color: #e9c46a; /* ORO */
+    color: #e9c46a; 
     border-bottom: 1px solid #2a9d8f;
     padding-bottom: 5px;
 }
@@ -290,30 +298,139 @@ footer {
 }
 
 .footer-columna ul li a:hover {
-    color: #e9c46a; /* ORO */
+    color: #e9c46a; 
 }
 
 .copyright {
     text-align: center;
     margin-top: 20px;
-    border-top: 1px solid #3a5f70; /* Un azul un poco más claro */
+    border-top: 1px solid #3a5f70; 
     padding-top: 20px;
     color: #aaa;
 }
 
 
 /* --- 8. MEDIA QUERIES (RESPONSIVE) --- */
-
-/* Estilos para Tablets (Medium) */
 @media (min-width: 768px) {
     .col-md-6 {
         width: 50%;
     }
 }
-
-/* Estilos para Desktops (Large) */
 @media (min-width: 992px) {
     .col-lg-4 {
         width: 33.3333%;
     }
+}
+
+/* --- 9. SECCIÓN HERO (NUEVO) --- */
+#hero {
+    padding: 12px; 
+    height: 60vh; 
+    background-image: url('Img/BANNER\ ACTUALIZADO.png'); 
+    background-size:auto 100%;
+    background-position: center;
+    border-radius: 20px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    position: relative; 
+    overflow: hidden; 
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.18); 
+}
+
+.hero-contenido {
+    position: relative; 
+    z-index: 2;
+    padding: 20px;
+}
+
+.hero-contenido h2 {
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    border: none; 
+    margin-bottom: 1.7em;
+}
+
+.hero-contenido p {
+    font-size: 1.3rem;
+    margin-bottom: 1.6em;
+    font-weight: bold;
+}
+
+.btn-hero {
+    background-color: #0000009e; 
+    color: #ffffff; 
+    padding: 7px 35px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.btn-hero:hover {
+    background-color: white;
+    color: #2a9d8f;
+}
+
+/* --- 10. BARRA DE BÚSQUEDA (NUEVO) --- */
+.barra-busqueda {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto 0 auto; 
+}
+
+.barra-busqueda form {
+    display: flex;
+}
+
+.barra-busqueda input[type="search"] {
+    flex-grow: 1; 
+    border: 2px solid #e9c46a;
+    padding: 10px;
+    border-radius: 5px 0 0 5px; 
+    font-size: 1rem;
+    transition: border-color 1s ease;
+}
+
+.barra-busqueda input[type="search"]:hover {
+    border-color: #2a9d8f;
+}
+
+.barra-busqueda button {
+    border: none;
+    background-color: #e9c46a;
+    color: white;
+    padding: 0 20px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0; 
+    font-weight: bold;
+    transition: background-color 0.7s ease;
+}
+.barra-busqueda button:hover {
+    background-color: #2a9d8f;
+}
+
+/* --- 11. INSIGNIAS DE PRODUCTO (NUEVO) --- */
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #e76f51; 
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 5px;
+    z-index: 2; 
 }
