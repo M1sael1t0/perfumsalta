@@ -163,8 +163,8 @@ nav ul li a:hover {
 }
 
 .img-producto {
-    height: 220px; 
-    object-fit: contain; 
+    height: 300px; 
+    object-fit: cover; 
     margin-bottom: 15px;
 }
 
