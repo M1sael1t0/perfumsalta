@@ -143,9 +143,9 @@ nav ul li a:hover {
 
 /* --- 5. CATÁLOGO Y TARJETAS DE PRODUCTO --- */
 .producto {
-    border: 1px solid #eee;
+    border: 2px solid #eee;
     border-radius: 10px;
-    padding: 20px;
+    padding: 50px;
     text-align: center;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0,0,0,0.05);
@@ -163,7 +163,7 @@ nav ul li a:hover {
 }
 
 .img-producto {
-    height: 300px; 
+    height: 250px; 
     object-fit: cover; 
     margin-bottom: 15px;
 }
