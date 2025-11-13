@@ -1,0 +1,85 @@
+/* --- 12. ESTILOS DEL BOTÓN MODO OSCURO --- */
+#modo-oscuro-btn {
+    position: absolute;
+    top: 30px;
+    /* Lo ponemos a la derecha del carrito (que está en 30px) */
+    right: 80px; 
+    
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 50%; /* Botón redondo */
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem; /* Tamaño del ícono (luna/sol) */
+    cursor: pointer;
+    transition: all 0.3ss ease;
+}
+
+#modo-oscuro-btn:hover {
+    background-color: #e9c46a; /* Color oro al pasar el mouse */
+    border-color: #e9c46a;
+}
+
+
+/* --- 13. ESTILOS DEL MODO OSCURO --- */
+
+/* Cuando el <body> tenga la clase .dark-mode, estos estilos se aplican */
+body.dark-mode {
+    background-color: #121212; /* Fondo oscuro principal */
+    color: #f1f1f1; /* Texto claro */
+}
+
+/* Header y Footer */
+body.dark-mode header,
+body.dark-mode footer {
+    background-color: #1a1a1a;
+    border-bottom-color: #333;
+}
+
+/* Títulos */
+body.dark-mode h1,
+body.dark-mode p,
+body.dark-mode h2,
+body.dark-mode .hero-contenido h2,
+body.dark-mode a {
+    color: #f1f1f1;
+}
+
+
+/* Color de acento (lo mantenemos) */
+body.dark-mode .precio,
+body.dark-mode nav ul li a,
+body.dark-mode .barra-busqueda button {
+    color: #2a9d8f;
+}
+
+/* Tarjetas de Producto */
+body.dark-mode .producto {
+    background-color: #222;
+    border-color: #333;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+body.dark-mode .producto .descripcion {
+    color: #bbb;
+}
+
+/* Formulario y Barra de Búsqueda */
+body.dark-mode #formulario,
+body.dark-mode .barra-busqueda input[type="search"] {
+    background-color: #2c2c2c;
+    border-color: #444;
+    color: #f1f1f1;
+}
+
+/* Botón modo oscuro (cuando está oscuro) */
+body.dark-mode #modo-oscuro-btn {
+    background-color: #333;
+    color: #f1f1f1;
+    border-color: #555;
+}
+
+
+body, header, footer, .producto, input, textarea, button {
+    transition: background-color 0.7s ease, color 1s ease, border-color 1s ease;
+}
