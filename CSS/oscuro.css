@@ -3,7 +3,7 @@
     position: absolute;
     top: 30px;
     /* Lo ponemos a la derecha del carrito (que está en 30px) */
-    right: 80px; 
+    left: 80px; 
     
     background-color: #f4f4f4;
     border: 1px solid #ccc;
