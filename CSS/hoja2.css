@@ -9,7 +9,9 @@
 .header-logo {
     height: 1.2em; /* Ajusta la altura del logo para que coincida con la altura del texto H1 */
     vertical-align: middle; /* Alinea el logo verticalmente con el texto */
-    margin-right: 10px; /* Espacio entre el logo y el texto */
+    top: 30px;
+    left: 100px;
+    margin-right: -20px; /* Espacio entre el logo y el texto */
     /* Si tu logo tiene un fondo oscuro y tu header es claro, podrías necesitar esto: */
     /* filter: brightness(0) invert(1); */ /* Esto invierte los colores para un logo blanco en fondo oscuro */
 }

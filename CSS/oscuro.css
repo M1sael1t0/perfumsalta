@@ -1,9 +1,9 @@
 /* --- 12. ESTILOS DEL BOTÓN MODO OSCURO --- */
 #modo-oscuro-btn {
     position: absolute;
-    top: 30px;
-    /* Lo ponemos a la derecha del carrito (que está en 30px) */
-    left: 80px; 
+    top: 33px;
+    /* Lo ponemos a la izquiera */
+    left: 27px; 
     
     background-color: #f4f4f4;
     border: 1px solid #ccc;
@@ -74,9 +74,9 @@ body.dark-mode .barra-busqueda input[type="search"] {
 
 /* Botón modo oscuro (cuando está oscuro) */
 body.dark-mode #modo-oscuro-btn {
-    background-color: #333;
+    background-color: transparent;
     color: #f1f1f1;
-    border-color: #555;
+    border-color: transparent;
 }
 
 
