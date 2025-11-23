@@ -436,3 +436,57 @@ footer {
     border-radius: 5px;
     z-index: 2; 
 }
+
+/* --- VERSIÓN MÓVIL (AJUSTE FINO DE ESPACIOS) --- */
+@media only screen and (max-width: 768px) {
+    #hero {
+        background-color: #000000 !important; /* Fondo negro para rellenar */
+        background-size: 100% auto !important; /* Imagen completa a lo ancho */
+        background-position: middle !important; 
+        background-repeat: no-repeat !important;
+        
+        height: auto !important;
+        min-height: 400px !important; /* Damos buen espacio vertical */
+        
+        /* CAMBIO CLAVE: Alineamos el contenido al inicio (arriba) para empujarlo nosotros */
+        align-items: flex-start !important; 
+    }
+
+    .hero-contenido {
+        width: 100% !important;
+        text-align: center !important; /* Asegura el centrado horizontal */
+        
+        /* ESPACIO IMAGEN <-> TÍTULO (H2)
+           Usamos 'vw' (viewport width). 45vw significa "45% del ancho de la pantalla".
+           Esto calcula automáticamente la altura de tu imagen para que el texto empiece justo abajo.
+           --> SI EL TEXTO TAPA EL LOGO: Sube este número (ej. 50vw).
+           --> SI HAY MUCHO ESPACIO NEGRO: Baja este número (ej. 35vw).
+        */
+        padding-top: 25vw !important; 
+        
+        padding-bottom: 40px !important; /* Espacio al final */
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    .hero-contenido h2 {
+        font-size: 1.8rem !important;
+        line-height: 1.2 !important;
+        
+        /* ESPACIO TÍTULO (H2) <-> PÁRRAFO (P) */
+        margin-bottom: 70px !important; 
+        margin-top: 0 !important;
+    }
+
+    .hero-contenido p {
+        font-size: 1rem !important;
+        
+        /* ESPACIO PÁRRAFO (P) <-> BOTÓN */
+        margin-bottom: 25px !important; 
+    }
+
+    .btn-hero {
+        font-size: 0.9rem !important;
+        padding: 10px 30px !important;
+    }
+}
