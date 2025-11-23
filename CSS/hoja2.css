@@ -462,7 +462,7 @@ footer {
            --> SI EL TEXTO TAPA EL LOGO: Sube este número (ej. 50vw).
            --> SI HAY MUCHO ESPACIO NEGRO: Baja este número (ej. 35vw).
         */
-        padding-top: 25vw !important; 
+        padding-top: 26vw !important; 
         
         padding-bottom: 40px !important; /* Espacio al final */
         padding-left: 15px !important;
@@ -487,6 +487,6 @@ footer {
 
     .btn-hero {
         font-size: 0.9rem !important;
-        padding: 10px 30px !important;
+        padding: 10px 15px !important;
     }
 }
