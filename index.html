@@ -201,23 +201,25 @@
 
         <div class="row">
             <section id="formulario" class="col-xs-12">
-                <h2>Formulario de Pedido</h2>
-                <form>
-                    <label for="nombre">Nombre</label>
-                    <input id="nombre" type="text" required>
-                    
-                    <label for="correo">Correo</label>
-                    <input id="correo" type="email" required>
-                    
-                    <label for="telefono">Teléfono</label>
-                    <input id="telefono" type="tel">
-                    
-                    <label for="mensaje">Mensaje</label>
-                    <textarea id="mensaje" rows="4" placeholder="Escribe aquí tu consulta o pedido..."></textarea>
-                    
-                    <button type="submit">Enviar Pedido</button>
-                </form>
-            </section>
+    <h2>Formulario de Pedido</h2>
+    <form id="form-pedido">
+        <label for="nombre">Nombre</label>
+        <input id="nombre" type="text" required>
+        
+        <label for="correo">Correo</label>
+        <input id="correo" type="email" required>
+        
+        <label for="telefono">Teléfono</label>
+        <input id="telefono" type="tel">
+        
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" rows="4" placeholder="Escribe aquí tu consulta o pedido..."></textarea>
+        
+        <div class="messages"></div>
+        
+        <button type="submit">Enviar Pedido</button>
+    </form>
+</section>
         </div>
         
     </main>
@@ -238,7 +240,7 @@
                 <h3>Contacto</h3>
                 <ul>
                     <li><a href="https://www.instagram.com/perfumsalta" target="_blank">Instagram</a></li>
-                    <li><a href="https://wa.me/529514348365?text=Hola%20qu%C3%A9%20tal%20PerfumsAlta%2C%20quiero%20cotizar%20un%20perfume!">WhatsApp</a></li>
+                    <li><a href="https://wa.me/529514348365?text=Hola%20qu%C3%A9%20tal%20PerfumsAlta%2C%20quiero%20cotizar%20un%20perfume!" target="_blank">WhatsApp</a></li>
                     <li><a href="mailto:perfumsalta@gmail.com">Gmail</a></li>
                     <li><a href="tel:+529514348365">Telefono</a></li>
                 </ul>
@@ -252,8 +254,30 @@
                 </ul>
             </div>
         </div>
+
         <p class="copyright">© 2025 Perfums Alta.</p>
+
+        <div class="contenedor-badges">
+            
+            <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+                <img style="border:0;width:88px;height:31px"
+                    src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
+                    alt="¡CSS Válido!" />
+            </a>
+
+            <a href="https://validator.w3.org/check?uri=referer" target="_blank">
+                <img src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png" 
+                     width="32" height="32" alt="HTML5 Válido" title="HTML5 Válido" style="border:0;">
+            </a>
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" 
+                 alt="JavaScript" title="JavaScript Incorporado" style="width:32px; height:32px; border-radius: 5px;">
+
+        </div>
+
     </footer>
-    <script src="js/oscuro.js"></script>
+<script src="js/oscuro.js"></script>
+<script src="js/carrito.js"></script>
+<script src="js/formulario.js?v=2.0"></script>
 </body>
 </html>
